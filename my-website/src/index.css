@@ -5,12 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #333;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Nav styling */
 
 nav {
   background-color: #333;
@@ -19,20 +22,24 @@ nav {
   display: flex; /* Enables Flexbox */
   justify-content: space-between; /* Spaces out the logo and nav links */
   align-items: center; /* Aligns items vertically */
+  padding-top: none;
 }
 
 .nav-content {
   list-style-type: none;
   display: flex;
   justify-content: right;
-  
+  margin-top: 0px;
  
 }
 
 nav ul li {
   padding: 0.5rem;
   float: right;
-  color: blue;
+  margin-right: 50px;
+  
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 nav a {
@@ -44,3 +51,117 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.logo img {
+  width: 120px; /* Default size */
+  height: auto;
+  margin-left: 20px;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .logo img {
+    width: 80px;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .logo img {
+    width: 60px;
+  }
+}
+
+/* Styles for the hamburger menu */
+.icon-menu{
+  display: none; /* Hidden by default */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Styles for the expanded menu */
+.nav-content.expanded {
+  display: block;
+}
+
+/* Hide the menu items by default on small screens */
+@media (max-width: 768px) {
+  .nav-content {
+    display: none; /* Hide the nav items */
+    position: absolute;
+    right: 0;
+    background-color: #f0c321;
+    /* Additional styles for the expanded menu */
+  }
+
+  .nav-content.expanded {
+    display: block;    
+  } 
+
+  .icon-menu {
+    display: block; /* Show the hamburger icon */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-content {
+    
+    width: 40%; /* or any width you prefer */
+    top: 0;
+    right: 0;
+    height: 100vh; /* full height */
+    transform: translateX(100%); /* Hide off-screen */
+    transition: transform 1s ease-in-out;
+  }
+
+  .nav-content.expanded {
+    transform: translateX(0); /* Show on screen */
+  }
+
+  /* Additional styles */
+}
+
+.close-nav {
+  font-size: 24px; /* Adjust size as needed */
+  background: none;
+  border: none;
+  color: white; /* Adjust color to match your design */
+  position: absolute;
+  top: 10px; /* Adjust position as needed */
+  right: 10px; /* Adjust position as needed */
+  cursor: pointer;
+}
+
+/* Home style */
+.home {
+  background-color: #333;
+  display: block;
+  width: 100vw;
+  height: 80vh;
+}
+
+.home p {
+  display: block;
+  margin-bottom: 1em;
+  text-align: left;
+  margin-left: 25vh;  
+}
+
+.name-title {
+  padding-top: 50px;  
+  font-size: 80px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #f0c321;
+  line-height: 1px;
+  margin-bottom: 10px;
+}
+
+.title-description {    
+  margin-bottom: 1em;
+  margin-top: 0;
+  font-size: 25px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

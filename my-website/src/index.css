@@ -16,16 +16,23 @@ nav {
   background-color: #333;
   color: white;
   padding: 1rem;
+  display: flex; /* Enables Flexbox */
+  justify-content: space-between; /* Spaces out the logo and nav links */
+  align-items: center; /* Aligns items vertically */
 }
 
-nav ul {
+.nav-content {
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
+  
+ 
 }
 
 nav ul li {
   padding: 0.5rem;
+  float: right;
+  color: blue;
 }
 
 nav a {

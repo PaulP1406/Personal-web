@@ -3,7 +3,10 @@ import React from 'react'
 const About = () => {
   return (
     <nav>
-      <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'space-around' }}>
+      <div className="logo">
+        <img src='logo.svg' alt='logo' />
+      </div>
+      <ul className='nav-content'>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#work">Work</a></li>

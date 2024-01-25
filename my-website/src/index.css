@@ -177,8 +177,9 @@ nav a:hover {
   width:150px;
   width:150px;
   height: 52px;
-  background-color:rgb(24, 131, 185);
-  border: transparent;
+  background-color: transparent;
+  border: 3px solid;
+  border-color: rgb(20, 174, 251);
   border-radius: 8px;
   cursor: pointer;            
 }
@@ -188,7 +189,8 @@ nav a:hover {
   letter-spacing: 1px;;
   font-family: 'Rubik', sans-serif; 
   font-size: 14px;
-  color:rgb(0, 0, 0);
+  color: rgb(20, 174, 251);
+  font-weight: bold;
 }
 
 .button-b {
@@ -196,8 +198,9 @@ nav a:hover {
   height: 52px;
   margin-left: 15px;
   border-radius: 8px;
-  background: #c69e0d;
-  border-width: 0.5px;
+  background: transparent;
+  border: 3px solid;
+  border-color: #c69e0d;
   cursor: pointer;    
 }
 
@@ -206,5 +209,6 @@ nav a:hover {
   letter-spacing: 1.5px;
   font-family: "Rubik",sans-serif;
   font-size: 14px;
-  color:aliceblue;
+  color:#c69e0d;
+  font-weight: bold;
 }

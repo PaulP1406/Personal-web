@@ -6,7 +6,7 @@ const About = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const toggleNav = () => {
     setIsNavExpanded(!isNavExpanded);
-  };
+  };;
   return (    
     <nav>
       <div className="logo">

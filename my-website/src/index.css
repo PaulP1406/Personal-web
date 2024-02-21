@@ -212,3 +212,58 @@ nav a:hover {
   color:#c69e0d;
   font-weight: bold;
 }
+
+/*About style */
+.about {
+  background-color: #333;
+  display: block;
+  width: 100vw;
+  height: 80vh;
+}
+
+.about p {
+  display: block;
+  margin-bottom: 1em;
+  text-align: left;
+  margin-left: 25vh;  
+}
+
+.about-title {  
+  margin-left: 25vh;
+  font-size: 80px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #f0c321;
+  line-height: 1px;
+}
+.about-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-description {
+  flex-basis: 60%;
+  margin-bottom: 1em;
+  margin-top: 0;
+  font-size: 25px;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 10px;  
+  margin-right: 10vh;
+  text-align: justify;
+}
+
+.about-main img {
+  flex-basis: 40%;   
+}
+
+@media (max-width: 768px) {
+  .about-main {
+    flex-direction: column; 
+  }
+
+  .about-description, .about-main img {
+    flex-basis: auto; 
+    width: 100%; 
+  }
+}

@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 28vh;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -23,6 +28,10 @@ nav {
   justify-content: space-between; /* Spaces out the logo and nav links */
   align-items: center; /* Aligns items vertically */
   padding-top: none;
+  position: sticky;
+  top: 0; /* Adjust if necessary, but 0 will stick it to the top */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  /* Your other styles for the navbar (background, padding, etc.) */
 }
 
 .nav-content {
@@ -139,7 +148,7 @@ nav a:hover {
   background-color: #333;
   display: block;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
 }
 
 .home p {
@@ -218,7 +227,7 @@ nav a:hover {
   background-color: #333;
   display: block;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
 }
 
 .about p {
@@ -230,40 +239,149 @@ nav a:hover {
 
 .about-title {  
   margin-left: 25vh;
-  font-size: 80px;
+  font-size: 60px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #f0c321;
   line-height: 1px;
+  
 }
+
+.about-title img {
+  width: 350px; 
+  height: auto;
+  margin-left: 20px;
+  margin-bottom: none;
+  vertical-align: middle;
+}
+
+.about-title::after {
+  content: '';
+  display: block;
+  height: 2px; /* Thickness of the line */
+  width: 220px; /* Adjust the width as needed for the short line */
+  background: #f0c321; /* Line color */
+  position: absolute;
+  bottom: -56vh; /* Adjust the position */
+  left: 19.5%; /* This centers the line */
+  transform: translateX(-50%); /* This also helps in centering the line */
+}
+
 .about-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 10vh;
 }
 
 .about-description {
-  flex-basis: 60%;
+  flex-basis: auto;
   margin-bottom: 1em;
   margin-top: 0;
   font-size: 25px;
+  font-weight: lighter;
   color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: rubik;
   padding-top: 10px;  
-  margin-right: 10vh;
+  margin-right: 10vw;
   text-align: justify;
 }
 
 .about-main img {
-  flex-basis: 40%;   
+  width: 220px;
+  height: 200px;  
+  /*border-radius: 50%; */
+  flex-basis: auto; 
+  margin-right: 10vw;  
+  margin-bottom: 5vh;
 }
+
 
 @media (max-width: 768px) {
   .about-main {
-    flex-direction: column; 
+    flex-direction: column;
+    text-align: center; /* Center align the text for mobile */
   }
 
   .about-description, .about-main img {
-    flex-basis: auto; 
-    width: 100%; 
+    width: auto; /* Let them take up the natural width */
+    margin: 0 auto; /* Center the image and description */
+  }
+
+  .about-description {
+    /* Adjust font size and padding as necessary for mobile */
+    font-size: 18px; /* Smaller font size for mobile */
+    padding: 0 20px; /* Add padding on the sides */
+  }
+
+  .about-main img {
+    width: 120px; /* Smaller size for the image on mobile */
+    height: 120px; /* Keep width and height the same for the circle */
+    margin-bottom: 20px; /* Add some space below the image */
   }
 }
+
+/* Contact styling */
+.contact {
+  background-color: #333;
+  display: block;
+  width: 100vw;
+  height: 80vh;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: none;
+  border-radius: 8px;
+}
+
+/* Style for form elements: label, input, textarea */
+form label {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 2px solid #f0c321;
+  color: white;
+  box-sizing: border-box; 
+  background-color: #333;/* Include padding in the element's total width and height */
+}
+
+form textarea {
+  height: 150px;
+  resize: vertical; /* Allows the user to resize the textarea vertically */
+}
+
+/* Style for the submit button */
+form input[type="submit"] {
+  
+  padding: 10px 20px;
+  margin-top: 20px;  
+  color: #f0c321;  
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width:150px;
+  height: 52px;  
+  border-radius: 8px;
+  background: transparent;
+  border: 3px solid;
+  border-color: #c69e0d;
+  cursor: pointer;    
+}
+
+/* Hover effect for the button */
+form input[type="submit"]:hover {
+  background-color: rgb(20, 174, 251);
+}
+

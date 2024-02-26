@@ -1,9 +1,11 @@
 import React from 'react'
 import logo from './logo.png';
-import { useState } from 'react';
+import logoAlter from  './logo_alter.png';
+import { useState, useEffect } from 'react';
 
 const Nav = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const toggleNav = () => {
     setIsNavExpanded(!isNavExpanded);
   };
@@ -18,10 +20,23 @@ const Nav = () => {
     setIsNavExpanded(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50; // You can adjust the number as needed
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (    
-    <nav>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <img src={logo} alt='Logo' />
+        <img src={scrolled ? logoAlter : logo} alt='Logo' />
       </div>
       <button
         className="icon-menu"

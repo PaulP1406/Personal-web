@@ -31,22 +31,51 @@ nav {
   position: sticky;
   top: 0; /* Adjust if necessary, but 0 will stick it to the top */
   z-index: 1000; /* Ensure it stays on top of other elements */
-  /* Your other styles for the navbar (background, padding, etc.) */
+  transition: all 0.3s ease-in-out;
+  height: 12vh;
+  margin-bottom: none;
+}
+
+.navbar.scrolled {
+  height: 8vh;
+  background-color:  #f0c321;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  /* Styles for your scrolled navbar */
+}
+
+.navbar.scrolled a{
+  color: #333; 
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.navbar.scrolled a:hover{
+  text-decoration: underline;
+}
+
+.navbar.scrolled ul li {
+  padding: 0.5rem;
+  float: right;
+  margin-right: 50px;  
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .nav-content {
   list-style-type: none;
   display: flex;
   justify-content: right;
-  margin-top: 0px;
- 
+  margin-top: 0px; 
+  
 }
 
 nav ul li {
   padding: 0.5rem;
   float: right;
   margin-right: 50px;
-  
+  vertical-align: middle;
   font-size: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -61,9 +90,9 @@ nav a:hover {
 }
 
 .logo img {
-  width: 120px; /* Default size */
+  width: 95px; /* Default size */
   height: auto;
-  margin-left: 20px;
+  margin-left: 3.5vw;
 }
 
 /* For tablets */
@@ -261,7 +290,7 @@ nav a:hover {
   width: 220px; /* Adjust the width as needed for the short line */
   background: #f0c321; /* Line color */
   position: absolute;
-  bottom: -56vh; /* Adjust the position */
+  bottom: -52vh; /* Adjust the position */
   left: 19.5%; /* This centers the line */
   transform: translateX(-50%); /* This also helps in centering the line */
 }
@@ -277,11 +306,10 @@ nav a:hover {
   flex-basis: auto;
   margin-bottom: 1em;
   margin-top: 0;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: lighter;
   color: white;
-  font-family: rubik;
-  padding-top: 10px;  
+  font-family: rubik;    
   margin-right: 10vw;
   text-align: justify;
 }
@@ -325,7 +353,7 @@ nav a:hover {
   background-color: #333;
   display: block;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
 }
 
 form {
@@ -385,3 +413,51 @@ form input[type="submit"]:hover {
   background-color: rgb(20, 174, 251);
 }
 
+
+/* Social media icon styling */
+.Social {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1.5vh;
+  margin-bottom: 3vh;
+}
+
+.icon-container .icon-link {
+  background-color: #f0c321; /* Circle background */
+  color: white; /* Icon color */
+  border-radius: 50%; /* Circular shape */
+  padding: 10px; /* Space around the icon */
+  margin: 1.5vh 0; /* Space between icons */
+  width: 35px; /* Circle size */
+  height: 35px; /* Circle size */
+  display: flex; /* To center the icon horizontally and vertically */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  transition: transform 0.3s; /* Smooth transform on hover */
+}
+
+.fa-svg {
+  color: white; /* Icon color */
+  font-size: 25px; /* Icon size */
+}
+
+.Social a {
+  display: inline-block;
+  margin-bottom: 0.5vh; /* Space between icons */
+}
+
+.Social a img {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+}
+
+/* Example for hover effect */
+.Social a:hover {
+  opacity: 0.7;
+  background-color: black;
+}

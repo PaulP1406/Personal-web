@@ -355,6 +355,9 @@ nav a:hover {
   width: 100vw;
   height: 100vh;
 }
+.contact p {
+  color:  white;
+}
 
 form {
   max-width: 500px;
@@ -370,6 +373,7 @@ form label {
   margin-top: 20px;
   font-size: 16px;
   color: white;
+  font-weight: bold;
 }
 
 form input[type="text"],
@@ -381,6 +385,7 @@ form textarea {
   border-radius: 4px;
   border: 2px solid #f0c321;
   color: white;
+  font-weight: bold;
   box-sizing: border-box; 
   background-color: #333;/* Include padding in the element's total width and height */
 }
@@ -405,12 +410,15 @@ form input[type="submit"] {
   background: transparent;
   border: 3px solid;
   border-color: #c69e0d;
-  cursor: pointer;    
+  cursor: pointer;
+  font-weight:  bold;    
 }
 
 /* Hover effect for the button */
 form input[type="submit"]:hover {
   background-color: rgb(20, 174, 251);
+  color: #010101; 
+  font-weight: bold;
 }
 
 
